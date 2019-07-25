@@ -1,31 +1,24 @@
 {
-  "name": "impropmtu",
+  "name": "impromptu",
   "version": "1.0.0",
-  "description": "impropmtu project 3",
+  "description": "impromptu hosting tests",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "heroku-postbuild": "npm run build"
   },
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "axios": "^0.19.0",
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.19.0",
-    "dotenv": "^6.2.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4"
   }
