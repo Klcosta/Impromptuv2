@@ -1,0 +1,23 @@
+.arrow{
+    height:10px;
+}
+
+.dropdown2{
+    position: absolute;
+    left: -470px;
+    display: none;
+    border-width: 2px;
+    border-color: #3a878f;
+    border-style: solid;
+    border-radius: 10px;
+    width: 630px;
+    background-color: white;
+    z-index: +3;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.dropdownparent:hover .dropdown2{
+    display: block;
+    
+}

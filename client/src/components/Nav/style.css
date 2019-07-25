@@ -1,0 +1,37 @@
+.height {
+    height: 40px;
+}
+
+.posabsolute{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    height: 70px;
+}
+
+.w100{
+    width: 100%
+}
+
+.icon{
+    display: none;
+}
+
+.login{
+    background: rgba(255 , 255, 255, 0.5);
+    border-radius: 10px;
+    border-color: #3a878f;
+    border-width: 5px;
+    border-style: solid;
+}
+
+@media only screen and (max-width: 700px) {
+    .icon{
+      display: block;
+    }
+
+    .full{
+        display: none;
+    }
+  }
