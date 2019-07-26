@@ -9,7 +9,6 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
 app.use(routes);
 
 // Serve up static assets (usually on heroku)
