@@ -126,7 +126,7 @@ class AdvancedSearch extends Component {
   }
 
   airportCoder = (userCityInput) => {
-  axios.get(`http://aviation-edge.com/v2/public/autocomplete?key=98ea47-bcf82a&city=${userCityInput}`)
+  axios.get(`https://aviation-edge.com/v2/public/autocomplete?key=98ea47-bcf82a&city=${userCityInput}`)
   .then((response) => {
     console.log(response.data)
     let citiesarray = []
