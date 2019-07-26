@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser")
+const Sequalize = require("Sequelize");
+const axios = require("axios");
+const db = require("../models"); 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
