@@ -69,6 +69,10 @@ router.route('/api/search').post(function (req, res) {
 //   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 // });
 
+router.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 //this is the kiwi api search
 async function axiosKiwi(searchRes) {
   console.log(queryResults[0].userInput)
