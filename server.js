@@ -9,12 +9,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(routes)
-  app.use(express.static("client/build"));
-}
+app.use(routes)
 
 // Define API routes here
 
