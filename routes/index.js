@@ -1,9 +1,9 @@
-// const path = require("path");
+const path = require("path");
 const router = require("express").Router();
 const axios = require("axios");
-// const sequelize = require("sequelize");
+const sequelize = require("sequelize");
 const Sequalize = require("Sequelize");
-// const apiRoutes = require("./api");
+const apiRoutes = require("./api");
 const db = require("../models"); 
 const Op = Sequalize.Op;
 
@@ -13,7 +13,7 @@ let clientDepartureArray = [];
 // let gCompletedKiwi = [];
 
 // API Routes
-// router.use("/api", apiRoutes);
+router.use("/api", apiRoutes);
 
 // api/search
 router.route('/api/search').post(function (req, res) {
@@ -65,12 +65,8 @@ router.route('/api/search').post(function (req, res) {
 });
 
 // If no API routes are hit, send the React app
-// router.use(function (req, res) {
-//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
-// });
-
-router.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+router.use(function (req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 //this is the kiwi api search
